@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,27 +22,66 @@
   </style>
 </head>
 <body>
+  <header>
+    <div class="header-wrapper">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+    </div>
+  </header>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
+  <main>
+    <div class="content-wrapper">
+      <div class="bill-wrapper">
+        <h1>Bill</h1>
+        <div class="bill">
+          <img src="./images/icon-dollar.svg" alt="dollar">
+          <input class="input" type="number" name="bill" placeholder="0">
+        </div>
+      </div>
+      <div class="tip-wrapper">
+        <h1>Select Tip %</h1>
+        <div class="tip">
+          <button class="tip-button" value="5%">5%</button>
+          <button class="tip-button" value="10%">10%</button>
+          <button class="tip-button" value="15%">15%</button>
+          <button class="tip-button" value="25%">25%</button>
+          <button class="tip-button" value="50%">50%</button>
+          <input class="input custom" type="number" name="tips" placeholder="Custom">
+        </div>
+      </div>
+      <div class="people-wrapper">
+        <h1>Number of People</h1>
+        <div class="people">
+          <img src="./images/icon-person.svg" alt="person">
+          <input class="input" type="number" name="people" placeholder="0">
+        </div>
+      </div>
+      <div class="total-wrapper">
+        <div class="top-total-wrapper">
+          <div class="tip-amount">
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <div class="tip-amount-total">
+            <span>$<span id="result-tip">0.00</span></span>
+          </div>
+        </div>
+        <div class="bottom-total-wrapper">
+          <div class="total-person">
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <div class="total">
+            <span>$<span id="total-tip">0.00</span></span>
+          </div>
+        </div>
+        <div class="reset-button">
+          <button class="reset">RESET</button>
+        </div>
+      </div>
+    </div>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
