@@ -108,7 +108,6 @@ const calculate = (values) => {
 
     tipPerPerson.innerHTML = tipAmount;
     totalPerPerson.innerHTML = total;
-
 }
 
 tipButtons.forEach((buttons) => {

@@ -101,11 +101,6 @@
         background-color: hsl(185, 41%, 84%);
      }
 
-     main {
-        background-color: white;
-        border-radius: 20px;
-     }
-
      h1 {
         font-size: .75em;
         color: hsl(186, 14%, 43%);
@@ -156,12 +151,22 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background-color: white;
      }
+
+     main .content-wrapper:nth-child(1) {
+      border-radius: 20px 20px 0 0;
+     }
+
+     main .content-wrapper:nth-child(2) {
+      border-radius: 0 0 20px 20px;
+     }
+
 
      .bill-wrapper,
      .tip-wrapper,
      .people-wrapper,
-     .total-wrapper {
+     .amount-content {
         width: calc(100% - 50px);
         display: flex;
         justify-content: center;
@@ -392,8 +397,90 @@
      Modify as content requires.
      ========================================================================== */
   
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1200px) {
     /* Style adjustments for viewports that meet the condition */
+    h1 {
+      font-size: .9em;
+    }
+
+    h2 {
+      font-size: .85em;
+    }
+
+    p {
+      font-size: .75em;
+    }
+
+    span {
+      font-size: 1.2em;
+    }
+
+
+    main {
+      display: flex;
+      justify-content: center;
+    }
+
+    main .content-wrapper:nth-child(1) {
+      border-radius: 20px 0 0 20px;
+     }
+
+     main .content-wrapper:nth-child(2) {
+      border-radius: 0 20px 20px 0;
+     }
+
+     .content-wrapper {
+      width: 500px;
+     }
+
+     .bill-wrapper,
+     .tip-wrapper,
+     .people-wrapper,
+     .amount-content {
+        width: calc(100% - 50px);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+     }
+
+     .bill-header h1,
+     .people-header h1,
+     .tip-wrapper h1 {
+      padding-left: 10px;
+     }
+
+     .bill img,
+     .people img{
+      position:relative;
+      left: 20px;
+     }
+
+     .total-wrapper {
+      margin: 0;
+      height: 450px;
+     }
+
+     .top-total-wrapper {
+      padding-bottom: 60px;
+      padding-top: 60px;
+     }
+
+     .bottom-total-wrapper {
+      padding-bottom: 120px;
+     }
+
+     .reset-button {
+      padding-bottom: 40px;
+     }
+
+     .reset {
+      padding: 20px 0;
+     }
+
+     .reset-inactive {
+      padding: 20px 0;
+     }
+
   }
   
   @media print,
