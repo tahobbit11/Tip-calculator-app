@@ -455,6 +455,14 @@
       left: 20px;
      }
 
+     .tip-button {
+      width: 30%;
+     }
+
+     .tip input {
+      width: 30%;
+     }
+
      .total-wrapper {
       margin: 0;
       height: 450px;
