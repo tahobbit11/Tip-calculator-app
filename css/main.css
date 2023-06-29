@@ -176,6 +176,13 @@
         margin-bottom: .5em;
      }
 
+     .bill-header,
+     .people-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+
      .bill,
      .people {
         display: flex;
@@ -270,7 +277,7 @@
      }
 
      .bottom-total-wrapper {
-        padding: 0 30px 20px 20px;
+        padding: 0 20px 30px 20px;
      }
 
      .reset-button {
@@ -290,8 +297,15 @@
         cursor: pointer;
      }
 
-     .reset:hover, .reset:active {
-
+     .reset-inactive {
+        width: calc(100% - 40px);
+        font-size: .9em;
+        background-color: hsl(186, 14%, 43%);
+        color: hsl(183, 100%, 15%);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 0;
+        cursor: pointer;
      }
 
   
@@ -378,7 +392,7 @@
      Modify as content requires.
      ========================================================================== */
   
-  @media only screen and (min-width: 35em) {
+  @media only screen and (min-width: 768px) {
     /* Style adjustments for viewports that meet the condition */
   }
   
